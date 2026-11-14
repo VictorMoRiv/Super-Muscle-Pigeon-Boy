@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://b03nqrk4lnmea"]
+
+[ext_resource type="Script" uid="uid://dsycwq10ehcy5" path="res://menu_principal.gd" id="1_hungm"]
+[ext_resource type="Texture2D" uid="uid://c1pnbtjdfentc" path="res://icon.svg" id="2_ellp3"]
+
+[node name="MenuPrincipal" type="Control" unique_id=452176746]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hungm")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1522935766]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 547.0
+offset_top = -323.99997
+offset_right = 675.0
+offset_bottom = -195.99997
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(-8.806572, 7.8735557)
+texture = ExtResource("2_ellp3")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1908188090]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -23.5
+offset_right = 20.0
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1978873355]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2115293141]
+layout_mode = 2
+text = "El pinche juego de la paloma con brazos"
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1665449015]
+layout_mode = 2
+text = "JUGAR"
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1783968264]
+layout_mode = 2
+text = "SALIR"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
