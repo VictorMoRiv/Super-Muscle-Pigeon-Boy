@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://b03nqrk4lnmea"]
 
 [ext_resource type="Script" uid="uid://dsycwq10ehcy5" path="res://menu_principal.gd" id="1_hungm"]
-[ext_resource type="Texture2D" uid="uid://c1pnbtjdfentc" path="res://icon.svg" id="2_ellp3"]
+[ext_resource type="Texture2D" uid="uid://d3qtn82626xb6" path="res://Assets/portada.png" id="2_ellp3"]
+[ext_resource type="Texture2D" uid="uid://bt80gfhka5vtk" path="res://Assets/PLAY.png" id="3_q08am"]
+[ext_resource type="Texture2D" uid="uid://c7j5uf472ek36" path="res://Assets/SMPB.png" id="3_wn5eh"]
 
 [node name="MenuPrincipal" type="Control" unique_id=452176746]
 layout_mode = 3
@@ -19,14 +21,32 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 547.0
-offset_top = -323.99997
-offset_right = 675.0
-offset_bottom = -195.99997
+offset_left = -583.0
+offset_top = -362.0
+offset_right = 1465.0
+offset_bottom = 1138.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(-8.806572, 7.8735557)
+scale = Vector2(0.56250733, 0.45543057)
 texture = ExtResource("2_ellp3")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=127458751]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -51.0
+offset_right = 2074.0
+offset_bottom = 1449.0
+scale = Vector2(0.5403172, 0.5040631)
+texture = ExtResource("3_wn5eh")
+
+[node name="Button" type="TextureButton" parent="." unique_id=850264981]
+layout_mode = 0
+offset_left = 689.0
+offset_top = 409.0
+offset_right = 2745.0
+offset_bottom = 1917.0
+scale = Vector2(0.51046073, 0.6310147)
+texture_normal = ExtResource("3_q08am")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1908188090]
 layout_mode = 1
@@ -47,17 +67,14 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2115293141]
-layout_mode = 2
-text = "El pinche juego de la paloma con brazos"
-
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1665449015]
-layout_mode = 2
-text = "JUGAR"
+[node name="Timer" type="Timer" parent="CenterContainer/VBoxContainer" unique_id=339490046]
+wait_time = 5.0
+autostart = true
 
 [node name="Button2" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1783968264]
 layout_mode = 2
 text = "SALIR"
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="CenterContainer/VBoxContainer/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

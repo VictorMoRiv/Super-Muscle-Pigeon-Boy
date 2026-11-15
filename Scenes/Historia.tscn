@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dsqmm5yo6muo0"]
+
+[ext_resource type="Script" uid="uid://bu2vv5noo0bfn" path="res://Scenes/historia.gd" id="1_ikytu"]
+[ext_resource type="Texture2D" uid="uid://bj06g3svbnul2" path="res://Assets/h1.png" id="2_3w3rn"]
+[ext_resource type="Texture2D" uid="uid://xuubn1qyhwce" path="res://Assets/h2.png" id="3_dd4bt"]
+[ext_resource type="Texture2D" uid="uid://c1nwv57h8tx77" path="res://Assets/h3.png" id="4_0f4eo"]
+[ext_resource type="Texture2D" uid="uid://bu220btcfxyxf" path="res://Assets/h4.png" id="5_4pnda"]
+
+[node name="Historia" type="Control" unique_id=1699252618]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ikytu")
+
+[node name="Timer" type="Timer" parent="." unique_id=347227240]
+wait_time = 5.0
+autostart = true
+
+[node name="1" type="TextureRect" parent="." unique_id=414734028]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.56612754, 0.4356777)
+texture = ExtResource("2_3w3rn")
+
+[node name="2" type="TextureRect" parent="." unique_id=99214256]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.56974506, 0.43765187)
+texture = ExtResource("3_dd4bt")
+
+[node name="3" type="TextureRect" parent="." unique_id=1099694658]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5677386, 0.44200066)
+texture = ExtResource("4_0f4eo")
+
+[node name="4" type="TextureRect" parent="." unique_id=1520251171]
+layout_mode = 0
+offset_right = 2048.0
+offset_bottom = 1500.0
+scale = Vector2(0.56654, 0.43551925)
+texture = ExtResource("5_4pnda")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

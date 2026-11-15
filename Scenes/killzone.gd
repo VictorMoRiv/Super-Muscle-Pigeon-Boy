@@ -4,7 +4,7 @@ extends Node2D
 @onready var timer = $Timer
 
 func _on_body_entered(body: Node2D) -> void:
-	print(1) # Replace with function body.
+	print(1) 
 	timer.start()
 
 

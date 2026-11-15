@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bamksdcblvfaw"]
+
+[ext_resource type="AudioStream" uid="uid://dsqbjv2nbngsv" path="res://Assets/businessstar-the-wooden-horse-275158.mp3" id="1_rvoc0"]
+
+[node name="MUsica de fondo" type="AudioStreamPlayer" unique_id=876907933]
+stream = ExtResource("1_rvoc0")
+autoplay = true
+parameters/looping = true

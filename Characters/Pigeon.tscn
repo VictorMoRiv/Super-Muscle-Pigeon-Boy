@@ -1,9 +1,18 @@
 [gd_scene format=3 uid="uid://7d3fji2d4p3b"]
 
 [ext_resource type="Script" uid="uid://beb4gids3ba2h" path="res://Characters/pigeon.gd" id="1_dv363"]
+[ext_resource type="AudioStream" uid="uid://3tc2fvgawa2y" path="res://Assets/freesound_community-birds-taking-off-fly-6277.mp3" id="2_p68c4"]
 [ext_resource type="Texture2D" uid="uid://60ixkv8socq8" path="res://Assets/pajaro/p0.png" id="2_ubk22"]
 [ext_resource type="Texture2D" uid="uid://cbkjpkf44y3dc" path="res://Assets/pajaro/p1.png" id="3_hu2uc"]
 [ext_resource type="Texture2D" uid="uid://bd0oh47gqwa2g" path="res://Assets/pajaro/p2.png" id="4_yq0gb"]
+[ext_resource type="Texture2D" uid="uid://dck61ptvvwvi2" path="res://Assets/pajaro/p3.png" id="5_j14kn"]
+[ext_resource type="Texture2D" uid="uid://dxope4obysx6l" path="res://Assets/pajaro/e3d4ac6e-5ed6-4725-89c6-724ecdf56bd5-0.png" id="5_l1ujy"]
+[ext_resource type="Texture2D" uid="uid://cukbdwutklw8a" path="res://Assets/pajaro/e3d4ac6e-5ed6-4725-89c6-724ecdf56bd5-1.png" id="6_p68c4"]
+[ext_resource type="Texture2D" uid="uid://cbftrgfwwaw2b" path="res://Assets/pajaro/e3d4ac6e-5ed6-4725-89c6-724ecdf56bd5-2.png" id="7_skobs"]
+[ext_resource type="Texture2D" uid="uid://dyg61vbp0uhv8" path="res://Assets/pajaro/e3d4ac6e-5ed6-4725-89c6-724ecdf56bd5-3.png" id="8_a306r"]
+[ext_resource type="Texture2D" uid="uid://cysf386sl2dar" path="res://Assets/pajaro/e3d4ac6e-5ed6-4725-89c6-724ecdf56bd5-4.png" id="9_7t3m2"]
+[ext_resource type="Texture2D" uid="uid://bti4wbats2a0y" path="res://Assets/pajaro/e3d4ac6e-5ed6-4725-89c6-724ecdf56bd5-5.png" id="10_khg22"]
+[ext_resource type="Texture2D" uid="uid://dxms5t7f83y5w" path="res://Assets/pajaro/e3d4ac6e-5ed6-4725-89c6-724ecdf56bd5-6.png" id="11_nf3p8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywf6o"]
 size = Vector2(189, 423.5)
@@ -34,10 +43,37 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("5_l1ujy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p68c4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_skobs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_a306r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7t3m2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_khg22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nf3p8")
+}, {
+"duration": 1.0,
 "texture": ExtResource("2_ubk22")
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_hu2uc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yq0gb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j14kn")
 }],
 "loop": 1,
 "name": &"walk",
@@ -51,7 +87,12 @@ script = ExtResource("1_dv363")
 position = Vector2(211.5, 308.75)
 shape = SubResource("RectangleShape2D_ywf6o")
 
+[node name="SonidoSalto" type="AudioStreamPlayer2D" parent="." unique_id=213330012]
+position = Vector2(238, 309)
+stream = ExtResource("2_p68c4")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=343419076]
 position = Vector2(238, 309)
 sprite_frames = SubResource("SpriteFrames_ywf6o")
-animation = &"jump"
+animation = &"walk"
+frame_progress = 0.49519935

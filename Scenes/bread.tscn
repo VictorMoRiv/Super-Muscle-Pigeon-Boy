@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ojx6uwl12mfa"]
+
+[ext_resource type="Script" uid="uid://cfen40o3fqk06" path="res://Scenes/bread.gd" id="1_ssi06"]
+[ext_resource type="Texture2D" uid="uid://bkasar4rfe620" path="res://Assets/bread_basket_front.png" id="1_v6j8n"]
+[ext_resource type="AudioStream" uid="uid://v2ixruuio5or" path="res://Assets/oh-my-god-meme.mp3" id="2_ssi06"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ywf6o"]
+radius = 24.0
+height = 64.0
+
+[node name="Bread" type="Area2D" unique_id=171688029]
+script = ExtResource("1_ssi06")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=467917962]
+position = Vector2(-8, 8)
+shape = SubResource("CapsuleShape2D_ywf6o")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2036133000]
+position = Vector2(-8, 8)
+texture = ExtResource("1_v6j8n")
+
+[node name="omg" type="AudioStreamPlayer2D" parent="." unique_id=1774166963]
+stream = ExtResource("2_ssi06")

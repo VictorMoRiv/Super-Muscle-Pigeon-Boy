@@ -2,12 +2,18 @@
 
 [ext_resource type="Script" uid="uid://v11gbf276i6w" path="res://Scenes/killzone.gd" id="1_jvagm"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ywf6o"]
+
 [node name="Killzone" type="Area2D" unique_id=807918408]
 script = ExtResource("1_jvagm")
 
 [node name="Timer" type="Timer" parent="." unique_id=219134240]
 wait_time = 0.6
 one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=451246268]
+position = Vector2(77, 394)
+shape = SubResource("WorldBoundaryShape2D_ywf6o")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://wmmgha0jr32x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x31by"]
+size = Vector2(48, 16)
+
+[node name="Agua" type="Area2D" unique_id=1922945953]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2100937954]
+position = Vector2(136, 200)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_x31by")
